@@ -10,7 +10,8 @@ RUN apt update && apt install --yes \
 	libdbd* \
 	libdbix* \
 	libposix-strftime-compiler-perl \
-	libapache-logformat-compiler-perl
+	libapache-logformat-compiler-perl \
+	mysql-client
 
 RUN cpanm \
 	Dancer2 \
