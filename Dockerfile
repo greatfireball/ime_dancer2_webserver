@@ -34,3 +34,9 @@ RUN apt-key adv \
        	    > /etc/apt/sources.list.d/ontologizer.list \
     && apt update && apt install --yes \
        	   ontologizer-cli
+
+RUN apt install --yes \
+        r-base \
+	build-essential
+
+RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("topGO",suppressUpdates=T, ask=F, suppressAutoUpdate=T);'
